@@ -1,15 +1,16 @@
 {
-  "name": "Taiwan-HBL-Records",
+  "name": "taiwan-hbl-records",
   "description": "",
   "version": "0.1.0",
   "scripts": {
-    "start": "node app.js"
+    "start": "node hbl.js"
   },
   "dependencies": {
     "cheerio": "~0.12.1",
     "moment": "~2.1.0",
     "nstore": "~0.5.2",
     "flow": "~0.2.3",
-    "underscore.string": "~2.3.3"
+    "underscore.string": "~2.3.3",
+    "request": "~2.25.0"
   }
 }
