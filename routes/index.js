@@ -4,7 +4,7 @@ var _ = require('underscore'),
     path = require('path'),
     Schema = mongoose.Schema,
     ObjectId = Schema.ObjectId;
-mongoose.connect('mongodb://localhost:27017/hbl');
+mongoose.connect('mongodb://hbladmin:qweqweqwe@ds039088.mongolab.com:39088/hbl');
 
 var GameSchema = new Schema({
     "Date": String,
