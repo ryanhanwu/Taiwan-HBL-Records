@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    table.table.table-striped.table-condensed
+        tr
+            th 隊伍
+            th 先發
+            th 背號
+            th 位置
+            th 姓名
+            th 上場時間
+                br
+                | (Mins.)
+            th 三分球
+                br
+                | 嘗試/投中/沒中
+            th 兩分球
+                br
+                | 嘗試/投中/沒中
+            th 罰球
+                br
+                | 嘗試/投中/沒中
+            th 得分
+            th 籃板
+                br
+                | 進攻/防守
+            th 助攻
+            th 抄截
+            th 阻攻
+            th 失誤
+            th 犯規
+        for record in records
+            tr 
+                td= record.teamName
+                td
+                    | #{record.game_start ? "V" : ''}
+                td= record.number
+                td= record.position
+                td= record.name
+                td= record.minutes_played
+                td
+                    | #{record.three_points_made + record.three_points_misses} / #{record.three_points_made} / #{record.three_points_misses}
+                td
+                    | #{record.field_goals_made + record.field_goal_misses} / #{record.field_goals_made} / #{record.field_goal_misses}
+                td
+                    | #{record.free_throws_made + record.free_throw_misses} / #{record.free_throws_made} / #{record.free_throw_misses}
+                td= record.points
+                td
+                    | #{record.offensive_rebounds} / #{record.defensive_rebounds} 
+                td= record.assists
+                td= record.steals
+                td= record.blocks
+                td= record.turnovers
+                td= record.fouls

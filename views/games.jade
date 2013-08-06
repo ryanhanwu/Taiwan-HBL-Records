@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    table.table.table-striped.table-condensed
+        tr
+            th Game ID
+            th 日期
+            th 場次
+            th 裁判
+            th 副裁判1
+            th 副裁判2
+            th 隊伍A
+            th 隊伍B
+            th 第一節比分
+            th 第二節比分
+            th 第三節比分
+            th 第四節比分
+        for game in games
+            tr
+                td
+                    a(href="/game/#{game.GameId}")= game.GameId
+                td= game.Date
+                td= game.No
+                td= game.Referee
+                td= game.Official_1
+                td= game.Official_2
+                td= game.TeamA
+                td= game.TeamB
+                td= game.Score_quarters_1
+                td= game.Score_quarters_2
+                td= game.Score_quarters_3
+                td= game.Score_quarters_4
